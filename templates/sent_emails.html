@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sent Emails</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sent Emails</h1>
+    <table>
+        <tr>
+            <th>Recipient</th>
+            <th>Subject</th>
+            <th>Body Preview</th>
+        </tr>
+        {% for email in emails %}
+        <tr>
+            <td>{{ email.to }}</td>
+            <td>{{ email.subject }}</td>
+            <td>{{ email.body[:100] }}...</td> <!-- Shows the first 100 characters of the email body -->
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
