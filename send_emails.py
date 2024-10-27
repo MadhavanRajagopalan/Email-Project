@@ -63,8 +63,8 @@ def send_bulk_emails(csv_file):
     
 #     body_html = body_html.replace('{{ name }}', 'Madhavan Rajagopalan').replace('{{ organization }}', 'AidWorks Foundation')
     
-#     send_email(test_email, "Test Subject: HTML Email", body_html)
+#     send_email(test_email, "Test Subject: HTML Email", body_html) 
 
 if __name__ == '__main__':
     # send_bulk_emails()
-    print("Sent emails:", sent_emails)  # Verify that the test email is added to the list
+    print("Sent emails:", sent_emails)
