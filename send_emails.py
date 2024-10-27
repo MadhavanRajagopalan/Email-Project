@@ -27,7 +27,7 @@ def send_email(to_address, subject, body_html):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
 
-    server.login('madhavanrajagopalan@aidworksfoundation.org', 'hczr gsuo oifh idnx')
+    server.login('madhavanrajagopalan@aidworksfoundation.org', 'password')
 
     server.sendmail(msg['From'], msg['To'], msg.as_string())
     server.quit()
